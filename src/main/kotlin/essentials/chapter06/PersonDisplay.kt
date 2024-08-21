@@ -1,6 +1,6 @@
 package essentials.chapter06
 
-fun main() {
+object PersonDisplay {
     fun formatPersonDisplay(
         name: String? = null,
         surname: String? = null,
@@ -18,11 +18,4 @@ fun main() {
         }
         return sb.toString().trim()
     }
-
-    require(formatPersonDisplay("John", "Smith", 42) == "John Smith (42)")
-    require(formatPersonDisplay("Alex", "Simonson") == "Alex Simonson")
-    require(formatPersonDisplay("Peter", age = 25) == "Peter (25)")
-    require(formatPersonDisplay(surname = "Johnson", age = 18) == "Johnson (18)")
-    require(formatPersonDisplay(age = 18) == "(18)")
-    require(formatPersonDisplay() == "")
 }
