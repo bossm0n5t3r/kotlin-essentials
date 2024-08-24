@@ -10,8 +10,14 @@ repositories {
     mavenCentral()
 }
 
+private val assertjVersion = "3.26.3"
+private val junitVersion = "5.11.0"
+
 dependencies {
     testImplementation(kotlin("test"))
+
+    testImplementation("org.assertj:assertj-core:$assertjVersion")
+    testImplementation("org.junit.jupiter:junit-jupiter-params:$junitVersion")
 }
 
 tasks.test {
